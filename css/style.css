@@ -11,6 +11,40 @@ html {
 
 body {
   font-family: "Nunito", sans-serif;
-  color: #6d5d4b;
+  color: #8e8d8a;
   font-weight: 300;
   line-height: 1.6; }
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh 40vw repeat(5, min-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  .container > * {
+    padding: 4rem;
+    font-size: 3rem; }
+
+.header {
+  background-color: #eae7dc;
+  grid-column: full-start / full-end; }
+
+.about {
+  grid-column: full-start / full-end; }
+
+.skills {
+  grid-column: full-start / full-end; }
+
+.work {
+  grid-column: center-start / center-end; }
+
+.contact {
+  background-color: #e98074;
+  grid-column: full-start / full-end;
+  color: #eae7dc; }
+
+.gallery {
+  grid-column: full-start / full-end; }
+
+.footer {
+  grid-column: full-start / full-end;
+  background-color: #e85a4f;
+  color: #eae7dc; }

@@ -1,14 +1,14 @@
 // COLOR VARIABLES
-$color-primary: #c69963;
-$color-primary-dark: #b28451;
+$color-primary: #e98074;
+$color-primary-dark: #e85a4f;
 
-$color-secondary: #101d2c;
+$color-secondary: #d8c3a5;
 
-$color-grey-light-1: #f9f7f6;
-$color-grey-light-2: #aaa;
+$color-grey-light-1: #eae7dc;
+$color-grey-light-2: #d8d5cb;
 
-$color-grey-dark-1: #54483a;
-$color-grey-dark-2: #6d5d4b;
+$color-grey-dark-1: #8e8d8a;
+$color-grey-dark-2: #747370;
 
 // FONT VARIABLES
 $font-primary: "Nunito", sans-serif;
@@ -29,7 +29,23 @@ html {
 
 body {
   font-family: $font-primary;
-  color: $color-grey-dark-2;
+  color: $color-grey-dark-1;
   font-weight: 300;
   line-height: 1.6;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh 40vw repeat(5, min-content);
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] minmax(6rem, 1fr) [full-end];
+
+  & > * {
+    padding: 4rem;
+    font-size: 3rem;
+  }
 }
