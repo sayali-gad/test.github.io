@@ -17,15 +17,32 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 80vh 40vw repeat(5, min-content);
+  grid-template-rows: 100vh 40vw repeat(5, min-content) 100vh;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
   .container > * {
     padding: 4rem;
     font-size: 3rem; }
 
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.heading-primary {
+  font-size: 4rem; }
+  .heading-primary--main {
+    display: block;
+    line-height: 1.4; }
+    .heading-primary--main span {
+      color: #e85a4f; }
+
 .header {
   background-color: #eae7dc;
   grid-column: full-start / full-end; }
+
+.header--clone {
+  position: relative; }
 
 .about {
   grid-column: full-start / full-end; }

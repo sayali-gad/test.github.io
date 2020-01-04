@@ -1,0 +1,12 @@
+.heading-primary {
+  font-size: 4rem;
+
+  &--main {
+    display: block;
+    line-height: 1.4;
+
+    & span {
+      color: $color-primary-dark;
+    }
+  }
+}
