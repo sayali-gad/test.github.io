@@ -1,3 +1,10 @@
 .about {
   grid-column: full-start / full-end;
+  font-size: 2.5rem;
+  padding: 5vw;
+  // background: url("../img/face.jpg");
+  // background-position: left center;
+  // background-size: cover;
+  background-color: $color-primary-dark;
+  color: $color-secondary;
 }

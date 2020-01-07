@@ -1,5 +1,35 @@
 .contact {
-  background-color: $color-primary;
+  // background: linear-gradient(
+  //   to bottom right,
+  //   $color-primary 2%,
+  //   $color-primary-dark 95%
+  // );
+  background-color: $color-primary-dark;
+  padding: 5vh;
   grid-column: full-start / full-end;
-  color: $color-grey-light-1;
+  // color: $color-secondary;
+
+  &-form {
+    padding: 2rem 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // height: 30vh;
+
+    .input-box {
+      width: 25vw;
+      display: inline-block;
+      border-bottom: 1px solid currentColor;
+      margin-bottom: 2rem;
+    }
+
+    input[type="text"],
+    textarea {
+      border: none;
+      text-decoration: underline;
+
+      background: transparent;
+      padding: 1.5rem 2rem;
+    }
+  }
 }

@@ -13,21 +13,22 @@ body {
   font-family: "Nunito", sans-serif;
   color: #8e8d8a;
   font-weight: 300;
-  line-height: 1.6; }
+  line-height: 1.6;
+  background-color: #eae7dc; }
 
 .container {
   display: grid;
-  grid-template-rows: 100vh 40vw repeat(5, min-content) 100vh;
+  grid-template-rows: 100vw 100vh repeat(6, min-content) 100vh;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
-  .container > * {
-    padding: 4rem;
-    font-size: 3rem; }
 
 .center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
+
+.mt-small {
+  margin-top: 2rem; }
 
 .heading-primary {
   font-size: 4rem; }
@@ -37,6 +38,38 @@ body {
     .heading-primary--main span {
       color: #e85a4f; }
 
+.heading-secondary {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  text-transform: capitalize;
+  color: #e85a4f;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  margin-bottom: 5vh; }
+
+.heading-gold {
+  color: #d8c3a5; }
+
+.navigation {
+  grid-column: center-start / center-end;
+  margin: 2rem auto;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); }
+  .navigation__list {
+    width: 35vw;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 1.3rem; }
+  .navigation__link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #e85a4f;
+    font-weight: 600;
+    letter-spacing: 2px; }
+
 .header {
   background-color: #eae7dc;
   grid-column: full-start / full-end; }
@@ -45,18 +78,87 @@ body {
   position: relative; }
 
 .about {
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  font-size: 2.5rem;
+  padding: 5vw;
+  background-color: #e85a4f;
+  color: #d8c3a5; }
+
+.skills-section {
+  grid-column: center-start / center-end;
+  padding: 6rem 0;
+  background: #eae7dc; }
 
 .skills {
-  grid-column: full-start / full-end; }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  grid-gap: 4rem; }
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .skill:hover .skill-text {
+    opacity: 1; }
+  .skill:hover .skill-icon {
+    fill: #eae7dc;
+    border: 1px solid #eae7dc; }
+    .skill:hover .skill-icon--html5 {
+      background-color: #e34f26; }
+    .skill:hover .skill-icon--css3 {
+      background-color: #1572b6; }
+    .skill:hover .skill-icon--javascript {
+      background-color: #f7df1e; }
+    .skill:hover .skill-icon--react {
+      background-color: #61dafb; }
+    .skill:hover .skill-icon--redux {
+      background-color: #764abc; }
+    .skill:hover .skill-icon--node {
+      background-color: #393; }
+    .skill:hover .skill-icon--mongodb {
+      background-color: #47a248; }
+    .skill:hover .skill-icon--git {
+      background-color: #f05032; }
+    .skill:hover .skill-icon--github {
+      background-color: #000000; }
+  .skill-icon {
+    background-color: #eae7dc;
+    fill: #8e8d8a;
+    width: 7rem;
+    height: 7rem;
+    transition: all 0.5s ease-in-out; }
+  .skill-text {
+    margin-top: 2rem;
+    font-size: 1.7rem;
+    font-weight: normal;
+    opacity: 0;
+    letter-spacing: 0.3rem;
+    transition: all 0.5s; }
 
 .work {
   grid-column: center-start / center-end; }
 
 .contact {
-  background-color: #e98074;
-  grid-column: full-start / full-end;
-  color: #eae7dc; }
+  background-color: #e85a4f;
+  padding: 5vh;
+  grid-column: full-start / full-end; }
+  .contact-form {
+    padding: 2rem 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .contact-form .input-box {
+      width: 25vw;
+      display: inline-block;
+      border-bottom: 1px solid currentColor;
+      margin-bottom: 2rem; }
+    .contact-form input[type="text"],
+    .contact-form textarea {
+      border: none;
+      text-decoration: underline;
+      background: transparent;
+      padding: 1.5rem 2rem; }
 
 .gallery {
   grid-column: full-start / full-end; }
@@ -64,4 +166,21 @@ body {
 .footer {
   grid-column: full-start / full-end;
   background-color: #e85a4f;
-  color: #eae7dc; }
+  color: #d8c3a5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2.5rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 1.5px; }
+
+.social {
+  width: 5rem;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none; }
+  .social-icon {
+    width: 2rem;
+    height: 2rem;
+    fill: currentColor; }

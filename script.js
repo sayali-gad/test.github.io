@@ -8,7 +8,7 @@ const observerCallback = entries => {
   const { isIntersecting, intersectionRatio } = entries[0];
   if (isIntersecting === true || intersectionRatio > 0) {
     console.log(document);
-    document.scrollingElement.scrollTop = 0;
+    // document.scrollingElement.scrollTop = 0;
     //   observer.unobserve(entry.target);
   }
 };
@@ -17,5 +17,5 @@ var observer = new IntersectionObserver(observerCallback, options);
 
 const onload = () => {
   const target = document.querySelector(".header--clone");
-  observer.observe(target);
+  // observer.observe(target);
 };

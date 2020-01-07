@@ -15,7 +15,29 @@
     <title>Sayali Gad</title>
   </head>
   <body class="container" onload="onload()">
-    <header class="header">
+    <div class="navigation">
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#home" class="navigation__link">home</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#about" class="navigation__link">about</a>
+          </li>
+
+          <li class="navigation__item">
+            <a href="#work" class="navigation__link">work</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#skills" class="navigation__link">skills</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#contact" class="navigation__link">contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <header class="header" id="home">
       <div class="center">
         <h1 class="heading-primary">
           <span class="heading-primary--main"
@@ -28,19 +50,128 @@
       </div>
     </header>
 
-    <section class="about">About</section>
+    <section class="about" id="about">
+      <h2 class="heading-secondary heading-gold">about me</h2>
 
-    <section class="work">Work</section>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ab,
+        nisi rerum, eligendi sequi unde facilis accusamus molestias, vero natus
+        consectetur! Sequi quae ab doloribus nostrum dolor, iusto corrupti
+        quasi?
+      </p>
+      <p class="mt-small">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+        pariatur nisi alias perferendis inventore natus ut repellendus,
+        blanditiis, laudantium debitis, quia amet reprehenderit. Possimus magnam
+        quia eligendi eveniet odio accusamus?
+      </p>
+    </section>
 
-    <section class="skills">Skills</section>
+    <section class="work" id="work">Work</section>
 
-    <section class="gallery">Gallery</section>
+    <section class="skills-section" id="skills">
+      <h2 class="heading-secondary">skills</h2>
+      <div class="skills">
+        <div class="skill">
+          <svg class="skill-icon skill-icon--html5">
+            <use xlink:href="img/sprite-grey.svg#icon-html5"></use>
+          </svg>
+          <p class="skill-text">HTML5</p>
+        </div>
+        <div class="skill">
+          <svg class="skill-icon skill-icon--css3">
+            <use xlink:href="img/sprite-grey.svg#icon-css3"></use>
+          </svg>
+          <p class="skill-text">CSS3</p>
+        </div>
+        <div class="skill">
+          <svg class="skill-icon skill-icon--javascript">
+            <use xlink:href="img/sprite-grey.svg#icon-javascript"></use>
+          </svg>
+          <p class="skill-text">JAVASCRIPT</p>
+        </div>
+        <div class="skill">
+          <svg class="skill-icon skill-icon--react">
+            <use xlink:href="img/sprite-grey.svg#icon-react"></use>
+          </svg>
+          <p class="skill-text">REACT</p>
+        </div>
+        <div class="skill">
+          <svg class="skill-icon skill-icon--redux">
+            <use xlink:href="img/sprite-grey.svg#icon-redux"></use>
+          </svg>
+          <p class="skill-text">REDUX</p>
+        </div>
+        <div class="skill">
+          <svg class="skill-icon skill-icon--node">
+            <use xlink:href="img/sprite-grey.svg#icon-node-dot-js"></use>
+          </svg>
+          <p class="skill-text">NODE</p>
+        </div>
+        <div class="skill">
+          <svg class="skill-icon skill-icon--mongodb">
+            <use xlink:href="img/sprite-grey.svg#icon-mongodb"></use>
+          </svg>
+          <p class="skill-text">MONGODB</p>
+        </div>
+        <div class="skill">
+          <svg class="skill-icon skill-icon--git">
+            <use xlink:href="img/sprite-grey.svg#icon-git"></use>
+          </svg>
+          <p class="skill-text">GIT</p>
+        </div>
+        <div class="skill">
+          <svg class="skill-icon skill-icon--github">
+            <use xlink:href="img/sprite-grey.svg#icon-github"></use>
+          </svg>
+          <p class="skill-text">GITHUB</p>
+        </div>
+      </div>
+    </section>
 
-    <section class="contact">Contact</section>
+    <section class="gallery" id="gallery">Gallery</section>
 
-    <footer class="footer">Footer</footer>
+    <section class="contact" id="contact">
+      <h2 class="heading-secondary heading-gold">contact</h2>
 
-    <section class="header header--clone">
+      <form class="contact-form" >
+        <div class="input-group">
+          <div class="input-box">
+            <input type="text" placeholder="full name" />
+          </div>
+          <div class="input-box">
+            <input type="text" placeholder="email id" />
+          </div>
+        </div>
+        <textarea
+          name="message"
+          id="message"
+          cols="30"
+          rows="2"
+          placeholder="message"
+        ></textarea>
+        <!-- <input type="text" placeholder="message" /> -->
+        <input type="submit" value="submit" />
+      </form>
+    </section>
+
+    <footer class="footer">
+      SAYALI GAD
+      <ul class="social">
+        <li class="social-link">
+          <svg class="social-icon social-icon--github">
+            <use xlink:href="img/sprite-grey.svg#icon-github"></use>
+          </svg>
+        </li>
+        <li class="social-link">
+          <svg class="social-icon social-icon--github">
+            <use xlink:href="img/sprite-grey.svg#icon-linkedin"></use>
+          </svg>
+        </li>
+      </ul>
+    </footer>
+
+    <!-- <section class="header header--clone">
       <div class="center">
         <h1 class="heading-primary">
           <span class="heading-primary--main"
@@ -51,7 +182,7 @@
           >
         </h1>
       </div>
-    </section>
+    </section> -->
 
     <script src="script.js"></script>
   </body>
