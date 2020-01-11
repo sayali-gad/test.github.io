@@ -106,6 +106,9 @@ body {
   background-blend-mode: color;
   background-position: top left;
   color: #000; }
+  @media only screen and (max-width: 30em) {
+    .about {
+      padding: 3.5rem; } }
   .about__text {
     opacity: 1;
     transition: opacity 0.2s ease-in; }
@@ -117,6 +120,9 @@ body {
   grid-column: full-start / full-end;
   padding: 5rem;
   background: #eae7dc; }
+  @media only screen and (max-width: 30em) {
+    .skills-section {
+      padding: 3.5rem; } }
 
 .skills {
   display: grid;
@@ -174,6 +180,9 @@ body {
   grid-column: full-start / full-end;
   color: #000;
   align-items: stretch; }
+  @media only screen and (max-width: 30em) {
+    .contact {
+      padding: 3.5rem; } }
   .contact-form {
     font-family: "Nunito", sans-serif; }
     .contact-form .input-box {
