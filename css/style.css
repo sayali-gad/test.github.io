@@ -8,6 +8,12 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 31.25em) {
+    html {
+      font-size: 31.2%; } }
 
 body {
   font-family: "Nunito", sans-serif;
@@ -18,17 +24,31 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 100vw 100vh repeat(6, min-content) 100vh;
+  grid-template-rows: 100vh repeat(5, min-content) 100vh;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
 .center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
 
 .mt-small {
   margin-top: 2rem; }
+
+.parallax {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.btn {
+  display: inline-block;
+  background-color: transparent;
+  padding: 1rem 2.5rem;
+  border-radius: 5px;
+  border: 1px solid currentColor; }
 
 .heading-primary {
   font-size: 4rem; }
@@ -56,7 +76,8 @@ body {
   position: fixed;
   top: 0;
   left: 50%;
-  transform: translateX(-50%); }
+  transform: translateX(-50%);
+  z-index: 2; }
   .navigation__list {
     width: 35vw;
     display: flex;
@@ -71,7 +92,7 @@ body {
     letter-spacing: 2px; }
 
 .header {
-  background-color: #eae7dc;
+  background-image: linear-gradient(#eae7dc, #eae7dc);
   grid-column: full-start / full-end; }
 
 .header--clone {
@@ -80,13 +101,21 @@ body {
 .about {
   grid-column: full-start / full-end;
   font-size: 2.5rem;
-  padding: 5vw;
-  background-color: #e85a4f;
+  padding: 5rem;
+  background-image: url("../img/bg5.jpg");
+  background-blend-mode: color;
+  background-position: top left;
   color: #d8c3a5; }
+  .about__text {
+    opacity: 1;
+    transition: opacity 0.2s ease-in; }
+  .about__text.fade {
+    opacity: 0;
+    transition: none; }
 
 .skills-section {
-  grid-column: center-start / center-end;
-  padding: 6rem 0;
+  grid-column: full-start / full-end;
+  padding: 5rem;
   background: #eae7dc; }
 
 .skills {
@@ -141,24 +170,58 @@ body {
 
 .contact {
   background-color: #e85a4f;
-  padding: 5vh;
-  grid-column: full-start / full-end; }
+  padding: 5rem;
+  grid-column: full-start / full-end;
+  color: #000;
+  align-items: stretch; }
   .contact-form {
-    padding: 2rem 15vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; }
+    font-family: "Nunito", sans-serif; }
+    @media only screen and (max-width: 75em) {
+      .contact-form {
+        padding: 0 5vw; } }
     .contact-form .input-box {
-      width: 25vw;
-      display: inline-block;
-      border-bottom: 1px solid currentColor;
-      margin-bottom: 2rem; }
+      width: 100%;
+      margin: 1rem;
+      position: relative; }
+      .contact-form .input-box label {
+        font-size: 1.3rem;
+        display: block;
+        color: #d8c3a5;
+        transition: all 0.2s ease-out;
+        margin-top: 1rem;
+        font-weight: bold; }
+      .contact-form .input-box input + label {
+        transform: translateY(-6rem); }
+      .contact-form .input-box textarea + label {
+        transform: translateY(-8rem); }
     .contact-form input[type="text"],
     .contact-form textarea {
+      font-family: "Nunito", sans-serif;
       border: none;
-      text-decoration: underline;
+      text-decoration: none;
+      border-bottom: 1px solid #000;
       background: transparent;
-      padding: 1.5rem 2rem; }
+      padding: 1.5rem 0 0.5rem;
+      width: 100%;
+      font-weight: bold; }
+      .contact-form input[type="text"]::placeholder,
+      .contact-form textarea::placeholder {
+        color: #000; }
+      .contact-form input[type="text"]:focus,
+      .contact-form textarea:focus {
+        border: 0;
+        border-bottom: 1px solid currentColor;
+        color: #d8c3a5;
+        outline: none; }
+  .contact .input-box input[type="text"]:placeholder-shown + label,
+  .contact .input-box textarea:placeholder-shown + label {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-3.5rem); }
+
+.flex-hrzntl {
+  display: flex;
+  justify-content: space-evenly; }
 
 .gallery {
   grid-column: full-start / full-end; }

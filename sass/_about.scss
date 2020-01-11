@@ -1,10 +1,27 @@
 .about {
   grid-column: full-start / full-end;
   font-size: 2.5rem;
-  padding: 5vw;
+  padding: 5rem;
   // background: url("../img/face.jpg");
   // background-position: left center;
   // background-size: cover;
-  background-color: $color-primary-dark;
+  // background-image: linear-gradient($color-primary-dark, $color-primary-dark);
+  // background-image: linear-gradient($color-primary-dark, $color-primary-dark),
+  //   url("../img/bg5.jpg");
+  background-image: url("../img/bg5.jpg");
+  background-blend-mode: color;
+  // background-image: url("../img/me.jpg");
+  background-position: top left;
+  // background-size: contain;
   color: $color-secondary;
+
+  &__text {
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
+  }
+
+  &__text.fade {
+    opacity: 0;
+    transition: none;
+  }
 }

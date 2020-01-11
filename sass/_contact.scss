@@ -1,35 +1,81 @@
 .contact {
-  // background: linear-gradient(
-  //   to bottom right,
-  //   $color-primary 2%,
-  //   $color-primary-dark 95%
-  // );
   background-color: $color-primary-dark;
-  padding: 5vh;
+  padding: 5rem;
   grid-column: full-start / full-end;
-  // color: $color-secondary;
+  color: #000;
+  align-items: stretch;
 
   &-form {
-    padding: 2rem 15vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    // height: 30vh;
+    // padding: 0 15vw;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    font-family: $font-primary;
+
+    @media only screen and (max-width: $bp-largest) {
+      padding: 0 5vw;
+    }
 
     .input-box {
-      width: 25vw;
-      display: inline-block;
-      border-bottom: 1px solid currentColor;
-      margin-bottom: 2rem;
+      width: 100%;
+      margin: 1rem;
+      position: relative;
+
+      label {
+        font-size: 1.3rem;
+        display: block;
+        color: $color-secondary;
+        transition: all 0.2s ease-out;
+        margin-top: 1rem;
+        font-weight: bold;
+      }
+
+      input + label {
+        transform: translateY(-6rem);
+      }
+
+      textarea + label {
+        transform: translateY(-8rem);
+      }
     }
 
     input[type="text"],
     textarea {
+      font-family: $font-primary;
       border: none;
-      text-decoration: underline;
-
+      text-decoration: none;
+      border-bottom: 1px solid #000;
       background: transparent;
-      padding: 1.5rem 2rem;
+      padding: 1.5rem 0 0.5rem;
+      width: 100%;
+      font-weight: bold;
+
+      &::placeholder {
+        color: #000;
+      }
+
+      &:focus {
+        border: 0;
+        border-bottom: 1px solid currentColor;
+        color: $color-secondary;
+        outline: none;
+      }
     }
   }
+
+  .input-box input[type="text"]:placeholder-shown + label,
+  .input-box textarea:placeholder-shown + label {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-3.5rem);
+  }
+}
+
+.flex-hrzntl {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn--submit {
+  // width: 10vw;
 }

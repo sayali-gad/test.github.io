@@ -14,6 +14,10 @@ $color-grey-dark-2: #747370;
 $font-primary: "Nunito", sans-serif;
 $font-display: "Josefin Sans", sans-serif;
 
+//RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; //1200px
+$bp-small: 31.25em; //500px
+
 *,
 *::before,
 *::after {
@@ -25,6 +29,14 @@ $font-display: "Josefin Sans", sans-serif;
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+  // scroll-behavior: smooth;
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
+  @media only screen and (max-width: $bp-small) {
+    font-size: 31.2%;
+  }
 }
 
 body {
@@ -37,27 +49,45 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 100vw 100vh repeat(6, min-content) 100vh;
+  grid-template-rows: 100vh repeat(5, min-content) 100vh;
   grid-template-columns:
     [full-start] minmax(6rem, 1fr) [center-start] repeat(
       8,
       [col-start] minmax(min-content, 14rem) [col-end]
     )
     [center-end] minmax(6rem, 1fr) [full-end];
-
-  // & > * {
-  //   padding: 4rem;
-  //   font-size: 3rem;
-  // }
 }
 
+// .center {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// }
+
 .center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .mt-small {
   margin-top: 2rem;
+}
+
+.parallax {
+  position: relative;
+  // height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.btn {
+  display: inline-block;
+  background-color: transparent;
+  padding: 1rem 2.5rem;
+  border-radius: 5px;
+  border: 1px solid currentColor;
 }

@@ -1,5 +1,6 @@
 .header {
-  background-color: $color-grey-light-1;
+  background-image: linear-gradient($color-grey-light-1, $color-grey-light-1);
+  // background-image: url("../img/bg1.jpg");
   grid-column: full-start / full-end;
 }
 
