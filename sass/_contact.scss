@@ -5,9 +5,9 @@
   color: #000;
   align-items: stretch;
 
-  @media only screen and (max-width: $bp-largest) {
-    padding: 3rem;
-  }
+  // @media only screen and (max-width: $bp-largest) {
+  //   padding: 3rem;
+  // }
 
   &-form {
     // padding: 0 15vw;
@@ -16,13 +16,13 @@
     // justify-content: space-between;
     font-family: $font-primary;
 
-    @media only screen and (max-width: $bp-largest) {
-      padding: 0 5vw;
-    }
+    // @media only screen and (max-width: $bp-largest) {
+    //   padding: 0 5vw;
+    // }
 
-    @media only screen and (max-width: $bp-small) {
-      padding: 0;
-    }
+    // @media only screen and (max-width: $bp-small) {
+    //   padding: 0;
+    // }
 
     .input-box {
       width: 100%;
@@ -44,6 +44,10 @@
 
       textarea + label {
         transform: translateY(-8rem);
+
+        @media only screen and (max-width: $bp-small) {
+          transform: translateY(-6rem);
+        }
       }
     }
 
@@ -58,7 +62,7 @@
       padding: 1.5rem 0 0.5rem;
       width: 100%;
       font-weight: bold;
-      font-size: inherit;
+      // font-size: inherit;
 
       &::placeholder {
         color: #000;
@@ -85,9 +89,13 @@
 .flex-hrzntl {
   display: flex;
   justify-content: space-evenly;
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+  }
 }
 
 .btn--submit {
   // width: 10vw;
-  font-size: inherit;
+  // font-size: inherit;
 }

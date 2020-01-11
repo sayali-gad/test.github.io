@@ -8,12 +8,12 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
-  @media only screen and (max-width: 75em) {
+  @media only screen and (max-width: 37.43em) {
     html {
       font-size: 50%; } }
-  @media only screen and (max-width: 31.25em) {
+  @media only screen and (max-width: 30em) {
     html {
-      font-size: 31.2%; } }
+      font-size: 35%; } }
 
 body {
   font-family: "Nunito", sans-serif;
@@ -106,9 +106,6 @@ body {
   background-blend-mode: color;
   background-position: top left;
   color: #000; }
-  @media only screen and (max-width: 75em) {
-    .about {
-      padding: 3rem; } }
   .about__text {
     opacity: 1;
     transition: opacity 0.2s ease-in; }
@@ -120,9 +117,6 @@ body {
   grid-column: full-start / full-end;
   padding: 5rem;
   background: #eae7dc; }
-  @media only screen and (max-width: 75em) {
-    .skills-section {
-      padding: 3rem; } }
 
 .skills {
   display: grid;
@@ -180,17 +174,8 @@ body {
   grid-column: full-start / full-end;
   color: #000;
   align-items: stretch; }
-  @media only screen and (max-width: 75em) {
-    .contact {
-      padding: 3rem; } }
   .contact-form {
     font-family: "Nunito", sans-serif; }
-    @media only screen and (max-width: 75em) {
-      .contact-form {
-        padding: 0 5vw; } }
-    @media only screen and (max-width: 31.25em) {
-      .contact-form {
-        padding: 0; } }
     .contact-form .input-box {
       width: 100%;
       margin: 1rem;
@@ -206,6 +191,9 @@ body {
         transform: translateY(-6rem); }
       .contact-form .input-box textarea + label {
         transform: translateY(-8rem); }
+        @media only screen and (max-width: 37.43em) {
+          .contact-form .input-box textarea + label {
+            transform: translateY(-6rem); } }
     .contact-form input[type="text"],
     .contact-form textarea {
       font-family: "Nunito", sans-serif;
@@ -216,8 +204,7 @@ body {
       background: transparent;
       padding: 1.5rem 0 0.5rem;
       width: 100%;
-      font-weight: bold;
-      font-size: inherit; }
+      font-weight: bold; }
       .contact-form input[type="text"]::placeholder,
       .contact-form textarea::placeholder {
         color: #000; }
@@ -237,9 +224,9 @@ body {
 .flex-hrzntl {
   display: flex;
   justify-content: space-evenly; }
-
-.btn--submit {
-  font-size: inherit; }
+  @media only screen and (max-width: 37.43em) {
+    .flex-hrzntl {
+      flex-direction: column; } }
 
 .gallery {
   grid-column: full-start / full-end; }

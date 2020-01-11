@@ -17,7 +17,8 @@ $font-display: "Josefin Sans", sans-serif;
 
 //RESPONSIVE BREAKPOINTS
 $bp-largest: 75em; //1200px
-$bp-small: 31.25em; //500px
+$bp-small: 37.43em; //500px
+$bp-xsmall: 30em; //359px
 
 *,
 *::before,
@@ -32,11 +33,15 @@ html {
   font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
   // scroll-behavior: smooth;
 
-  @media only screen and (max-width: $bp-largest) {
+  // @media only screen and (max-width: $bp-largest) {
+  //   font-size: 50%;
+  // }
+  @media only screen and (max-width: $bp-small) {
     font-size: 50%;
   }
-  @media only screen and (max-width: $bp-small) {
-    font-size: 31.2%;
+
+  @media only screen and (max-width: $bp-xsmall) {
+    font-size: 35%;
   }
 }
 
