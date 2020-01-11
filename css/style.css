@@ -11,9 +11,6 @@ html {
   @media only screen and (max-width: 75em) {
     html {
       font-size: 50%; } }
-  @media only screen and (max-width: 31.25em) {
-    html {
-      font-size: 31.2%; } }
 
 body {
   font-family: "Nunito", sans-serif;
@@ -68,7 +65,7 @@ body {
   margin-bottom: 5vh; }
 
 .heading-gold {
-  color: #d8c3a5; }
+  color: #000; }
 
 .navigation {
   grid-column: center-start / center-end;
@@ -105,7 +102,10 @@ body {
   background-image: url("../img/bg5.jpg");
   background-blend-mode: color;
   background-position: top left;
-  color: #d8c3a5; }
+  color: #000; }
+  @media only screen and (max-width: 75em) {
+    .about {
+      padding: 3rem; } }
   .about__text {
     opacity: 1;
     transition: opacity 0.2s ease-in; }
@@ -117,6 +117,9 @@ body {
   grid-column: full-start / full-end;
   padding: 5rem;
   background: #eae7dc; }
+  @media only screen and (max-width: 75em) {
+    .skills-section {
+      padding: 3rem; } }
 
 .skills {
   display: grid;
@@ -174,6 +177,9 @@ body {
   grid-column: full-start / full-end;
   color: #000;
   align-items: stretch; }
+  @media only screen and (max-width: 75em) {
+    .contact {
+      padding: 3rem; } }
   .contact-form {
     font-family: "Nunito", sans-serif; }
     @media only screen and (max-width: 75em) {
@@ -189,7 +195,7 @@ body {
       .contact-form .input-box label {
         font-size: 1.3rem;
         display: block;
-        color: #d8c3a5;
+        color: #000;
         transition: all 0.2s ease-out;
         margin-top: 1rem;
         font-weight: bold; }
@@ -217,7 +223,7 @@ body {
         border: 0;
         outline: none;
         border-bottom: 1px solid currentColor;
-        color: #d8c3a5;
+        color: #000;
         outline: none; }
   .contact .input-box input[type="text"]:placeholder-shown + label,
   .contact .input-box textarea:placeholder-shown + label {
@@ -238,7 +244,7 @@ body {
 .footer {
   grid-column: full-start / full-end;
   background-color: #e85a4f;
-  color: #d8c3a5;
+  color: #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
