@@ -181,7 +181,7 @@ body {
         padding: 0 5vw; } }
     @media only screen and (max-width: 31.25em) {
       .contact-form {
-        padding: 0 2vw; } }
+        padding: 0; } }
     .contact-form .input-box {
       width: 100%;
       margin: 1rem;
@@ -207,7 +207,8 @@ body {
       background: transparent;
       padding: 1.5rem 0 0.5rem;
       width: 100%;
-      font-weight: bold; }
+      font-weight: bold;
+      font-size: inherit; }
       .contact-form input[type="text"]::placeholder,
       .contact-form textarea::placeholder {
         color: #000; }
@@ -227,6 +228,9 @@ body {
 .flex-hrzntl {
   display: flex;
   justify-content: space-evenly; }
+
+.btn--submit {
+  font-size: inherit; }
 
 .gallery {
   grid-column: full-start / full-end; }

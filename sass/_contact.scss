@@ -17,7 +17,7 @@
     }
 
     @media only screen and (max-width: $bp-small) {
-      padding: 0 2vw;
+      padding: 0;
     }
 
     .input-box {
@@ -54,6 +54,7 @@
       padding: 1.5rem 0 0.5rem;
       width: 100%;
       font-weight: bold;
+      font-size: inherit;
 
       &::placeholder {
         color: #000;
@@ -84,4 +85,5 @@
 
 .btn--submit {
   // width: 10vw;
+  font-size: inherit;
 }
