@@ -68,7 +68,7 @@ body {
   margin-bottom: 5vh; }
 
 .heading-gold {
-  color: #000; }
+  color: #d8c3a5; }
 
 .navigation {
   grid-column: center-start / center-end;
@@ -105,10 +105,10 @@ body {
   background-image: url("../img/bg5.jpg");
   background-blend-mode: color;
   background-position: top left;
-  color: #000; }
+  color: #d8c3a5; }
   @media only screen and (max-width: 30em) {
     .about {
-      padding: 3.5rem; } }
+      padding: 4.5rem 3.5rem; } }
   .about__text {
     opacity: 1;
     transition: opacity 0.2s ease-in; }
@@ -122,12 +122,16 @@ body {
   background: #eae7dc; }
   @media only screen and (max-width: 30em) {
     .skills-section {
-      padding: 3.5rem; } }
+      padding: 4.5rem 3.5rem; } }
 
 .skills {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
   grid-gap: 4rem; }
+  @media only screen and (max-width: 30em) {
+    .skills {
+      grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+      grid-gap: 3rem; } }
 
 .skill {
   display: flex;
@@ -136,26 +140,36 @@ body {
   align-items: center; }
   .skill:hover .skill-text {
     opacity: 1; }
-  .skill:hover .skill-icon {
+  .skill:hover .skill-icon,
+  .skill:active .skill-icon {
     fill: #eae7dc;
     border: 1px solid #eae7dc; }
-    .skill:hover .skill-icon--html5 {
+    .skill:hover .skill-icon--html5,
+    .skill:active .skill-icon--html5 {
       background-color: #e34f26; }
-    .skill:hover .skill-icon--css3 {
+    .skill:hover .skill-icon--css3,
+    .skill:active .skill-icon--css3 {
       background-color: #1572b6; }
-    .skill:hover .skill-icon--javascript {
+    .skill:hover .skill-icon--javascript,
+    .skill:active .skill-icon--javascript {
       background-color: #f7df1e; }
-    .skill:hover .skill-icon--react {
+    .skill:hover .skill-icon--react,
+    .skill:active .skill-icon--react {
       background-color: #61dafb; }
-    .skill:hover .skill-icon--redux {
+    .skill:hover .skill-icon--redux,
+    .skill:active .skill-icon--redux {
       background-color: #764abc; }
-    .skill:hover .skill-icon--node {
+    .skill:hover .skill-icon--node,
+    .skill:active .skill-icon--node {
       background-color: #393; }
-    .skill:hover .skill-icon--mongodb {
+    .skill:hover .skill-icon--mongodb,
+    .skill:active .skill-icon--mongodb {
       background-color: #47a248; }
-    .skill:hover .skill-icon--git {
+    .skill:hover .skill-icon--git,
+    .skill:active .skill-icon--git {
       background-color: #f05032; }
-    .skill:hover .skill-icon--github {
+    .skill:hover .skill-icon--github,
+    .skill:active .skill-icon--github {
       background-color: #000000; }
   .skill-icon {
     background-color: #eae7dc;
@@ -185,11 +199,11 @@ body {
   background-color: #e85a4f;
   padding: 5rem;
   grid-column: full-start / full-end;
-  color: #000;
+  color: #d8c3a5;
   align-items: stretch; }
   @media only screen and (max-width: 30em) {
     .contact {
-      padding: 3.5rem; } }
+      padding: 4.5rem 3.5rem; } }
   .contact-form {
     font-family: "Nunito", sans-serif; }
     .contact-form .input-box {
@@ -199,28 +213,32 @@ body {
       .contact-form .input-box label {
         font-size: 1.3rem;
         display: block;
-        color: #000;
+        color: #d8c3a5;
         transition: all 0.2s ease-out;
         margin-top: 1rem;
         font-weight: bold; }
       .contact-form .input-box input + label {
         transform: translateY(-6rem); }
+        @media only screen and (max-width: 37.43em) {
+          .contact-form .input-box input + label {
+            transform: translateY(-8rem); } }
       .contact-form .input-box textarea + label {
         transform: translateY(-8rem); }
         @media only screen and (max-width: 37.43em) {
           .contact-form .input-box textarea + label {
-            transform: translateY(-6rem); } }
+            transform: translateY(-12rem); } }
     .contact-form input[type="text"],
     .contact-form textarea {
       font-family: "Nunito", sans-serif;
       border: 0;
       outline: none;
       text-decoration: none;
-      border-bottom: 1px solid #000;
+      border-bottom: 1px solid #d8c3a5;
       background: transparent;
       padding: 1.5rem 0 0.5rem;
       width: 100%;
-      font-weight: bold; }
+      font-weight: bold;
+      color: inherit; }
       .contact-form input[type="text"]::placeholder,
       .contact-form textarea::placeholder {
         color: #000; }
@@ -229,8 +247,11 @@ body {
         border: 0;
         outline: none;
         border-bottom: 1px solid currentColor;
-        color: #000;
+        color: #d8c3a5;
         outline: none; }
+      .contact-form input[type="text"]:placeholder-shown,
+      .contact-form textarea:placeholder-shown {
+        border-bottom: 1px solid #000; }
   .contact .input-box input[type="text"]:placeholder-shown + label,
   .contact .input-box textarea:placeholder-shown + label {
     visibility: hidden;
@@ -244,13 +265,19 @@ body {
     .flex-hrzntl {
       flex-direction: column; } }
 
+.btn--right {
+  float: right; }
+
+.btn--submit:hover {
+  color: #d8c3a5; }
+
 .gallery {
   grid-column: full-start / full-end; }
 
 .footer {
   grid-column: full-start / full-end;
   background-color: #e85a4f;
-  color: #000;
+  color: #d8c3a5;
   display: flex;
   justify-content: space-between;
   align-items: center;
