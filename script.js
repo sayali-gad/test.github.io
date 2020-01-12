@@ -60,6 +60,7 @@ let observer = new IntersectionObserver(callback, options);
 var observerClone = new IntersectionObserver(callbackClone, optionsClone);
 
 const onLoad = e => {
+  alert("loaded")
   const elem = document.querySelector(".about");
   const elemClone = document.querySelector(".header--clone");
   observer.observe(elem);

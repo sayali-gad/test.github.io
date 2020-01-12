@@ -163,6 +163,10 @@ body {
     width: 7rem;
     height: 7rem;
     transition: all 0.5s ease-in-out; }
+    @media only screen and (max-width: 37.43em) {
+      .skill-icon {
+        width: 5rem;
+        height: 5rem; } }
   .skill-text {
     margin-top: 2rem;
     font-size: 1.7rem;
@@ -170,6 +174,9 @@ body {
     opacity: 0;
     letter-spacing: 0.3rem;
     transition: all 0.5s; }
+    @media only screen and (max-width: 37.43em) {
+      .skill-text {
+        opacity: 1; } }
 
 .work {
   grid-column: center-start / center-end; }
