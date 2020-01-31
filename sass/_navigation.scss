@@ -1,16 +1,30 @@
 .navigation {
   grid-column: center-start / center-end;
-  margin: 2rem auto;
+  padding: 2rem;
   position: fixed;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  right: 0;
+  left: 0;
+  // transform: translateX(-50%);
   z-index: 2;
 
+  @media only screen and (max-width: $bp-xsmall) {
+    display: none;
+  }
+
+  &.colorNav {
+    background: $color-primary-dark;
+
+    .navigation__link {
+      color: $color-grey-light-1;
+    }
+  }
+
   &__list {
-    width: 35vw;
+    // width: 35vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     list-style: none;
     font-size: 1.3rem;
   }
@@ -19,7 +33,7 @@
     text-transform: uppercase;
     text-decoration: none;
     color: $color-primary-dark;
-    font-weight: 600;
+    font-weight: bold;
     letter-spacing: 2px;
   }
 }
